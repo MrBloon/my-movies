@@ -27,9 +27,15 @@ import "bootstrap";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
-import { fetchMovies } from '../components/movies';
+import { searchMovies} from '../components/movies';
+
+
+
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
-  fetchMovies();
+  searchMovies();
+
 });
+
+

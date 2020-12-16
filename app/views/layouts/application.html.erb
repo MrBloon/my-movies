@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MyMovies</title>
+    <title>What the cut</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= favicon_link_tag asset_path('mylogo.png'), :rel => 'icon', :type =>  'image/png' %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -17,18 +18,17 @@
 
     <%= yield %>
 
-    <div class="container text-center">
+    <div class="container m-5" style="max-width: 1400px;">
+      <div id="results" class="cards">
+      </div>
+    </div>
 
-      <form id="search-movies" class="form-inline">
-        <input id="keyword" type="text" class="form-control ml-auto mr-2" placeholder="Find movies">
-        <input type="submit" class="btn btn-primary mr-auto ml-2" value="Search">
-      </form>
-
-      <ul id="results" class="list-inline"></ul>
-
+    <div class="container">
+      <div id="movie"></div>
     </div>
 
 
+    <%= render 'shared/footer' %>
   </body>
 </html>
 

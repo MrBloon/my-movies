@@ -1,2 +1,21 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "banner.jpg" %>');">
+  <div class="container">
+    <h1>What the cut</h1>
+    <p>Discover something great to watch</p>
+    <form id="search-movies">
+      <div class="form-row align-items-center">
+        <div class="col-auto">
+          <input type="text" class="form-control mb-2" id="keyword" placeholder="Find movies">
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary mb-2">Search</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+

@@ -40,6 +40,8 @@ const findMovie = () => {
           results.innerHTML = "";
           const banner = document.querySelector(".banner");
           banner.classList.add("d-none");
+          const button = document.querySelector(".btn-group");
+          button.classList.remove("d-none");
           const output =`
                           <div class="container">
 
@@ -50,7 +52,7 @@ const findMovie = () => {
                               <div class="col-12 col-lg-8 d-flex flex-column">
                                 <div class="d-flex justify-content-between">
                                   <h2 class="mb-3">${data.Title}</h2>
-                                  <a href="#"><i class="fas fa-bookmark"></i></a>
+
                                 </div>
                                 <ul class="list-group">
                                   <li class="list-group-item"><strong>Rated:</strong> ${data.Rated}</li>
@@ -76,15 +78,10 @@ const findMovie = () => {
                               </div>
                               <div class="row">
                                 <div class="col-12">
-                                  <ul class="pl-0" style="list-style: none;">
-                                    <li>
-                                      <span>${data.imdbRating}/10<i class="fas fa-star ml-2"></i> on<a href="http://imdb.com/title/${data.imdbID}" target="_blank" class="ml-2">IMDB     </a></span>
-                                    </li>
-                                  </ul>
+                                  <span>${data.imdbRating}/10<i class="fas fa-star ml-2"></i> on<a href="http://imdb.com/title/${data.imdbID}" target="_blank" class="ml-2 mr-3">IMDB     </a></span>
                                 </div>
                               </div>
                             </div>
-
                           </div>
                         `;
           const resultat = document.querySelector("#movie");
@@ -94,8 +91,9 @@ const findMovie = () => {
   });
 };
 
+
+
 export { searchMovies };
-// export { findMovie };
 
 
 

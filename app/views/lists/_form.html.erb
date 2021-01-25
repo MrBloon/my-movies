@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-8">
+      <div class="card-form">
+        <h2 class="mb-5">Your new list</h2>
+        <%= simple_form_for(@list) do |f|%>
+          <%= f.input :name, placeholder: "My list#12" %>
+          <%= f.input :description, placeholder: "How would you best describe your list?" %>
+          <%= f.button :submit, class: 'btn btn-primary' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

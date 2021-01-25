@@ -1,0 +1,14 @@
+a.list-link {
+  text-decoration: none;
+  color: white;
+  ul {
+    background-color: #323232;
+    list-style: none;
+    span {
+      opacity: .7;
+    }
+    &:hover {
+      border: solid white;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<div class="container">
+  <% if List.all.empty? %>
+    <h2>You don't have a list yet !</h2>
+    <%= link_to "Create your first list", new_list_path %>
+  <% else %>
+    <% @lists.each do |list|%>
+      <div class="row">
+        <div class="col-12 col-lg-8 offset-lg-2">
+          <%= link_to list_path(list), class: "list-link" do %>
+            <ul class="p-3">
+              <li><h3><%= list.name %></h3></li>
+              <li><p><%= list.description %></p></li>
+              <li><span>x movies</span></li>
+            </ul>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+
+

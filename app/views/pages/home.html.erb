@@ -16,6 +16,38 @@
 </div>
 
 
+<div class="container m-5" style="max-width: 1400px;">
+  <div id="results" class="cards">
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="text-right">
+    <div class="btn-group d-none">
+      <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Add to list
+      </button>
+      <div class="dropdown-menu">
+        <% List.all.each do |list|%>
+          <%= simple_form_for list do |f|%>
+            <%= f.input :name, as: :hidden, input_html: { value: "#{list.description}" } %>
+            <%= f.input :description, as: :hidden, input_html: { value: "#{list.description}" } %>
+            <%= f.button :submit, "#{list.name}", class: "dropdown-item list-name" %>
+          <% end %>
+        <% end %>
+        <div class="dropdown-divider"></div>
+        <%= link_to "New list", new_list_path, class: "dropdown-item" %>
+      </div>
+    </div>
+  </div>
+  <div id="movie">
+
+  </div>
+</div>
+
+
+
 
 
 
